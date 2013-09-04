@@ -90,4 +90,5 @@ mysql有时候忘记密码了怎么办?我给出案例和说明!
 　　D:\web\www.php100.com\Mysql\MySQL Server5.5\bin>
 　　
 　　
+　　
 　　Do not install anything on a button to your website directory, you'll destroy your site database data, remember to local backup database data
