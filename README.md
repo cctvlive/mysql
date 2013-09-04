@@ -6,7 +6,8 @@ mysql-phpmyadmin
 
 
 mysql有时候忘记密码了怎么办?我给出案例和说明!
-two:
+
+#two:
 　　Windows下的实际操作如下
 
 　　1.关闭正在运行的MySQL。
@@ -89,11 +90,18 @@ two:
 
 　　D:\web\www.php100.com\Mysql\MySQL Server5.5\bin>
 　　
-　　one:
+　　.........................//////////////////////////////////////////////
+　　#one:
 　　数据恢复:
+　　
 　　1关闭数据库服务
+　　
 　　2cp  崩溃的wed服务下的mysql/data/(ib_logfile0,ib_logfile1,ibdata1)3个文件TO
+　　
 　　新安装的wed服务下的mysql/data下,覆盖掉, 会出现你的数据库密码又不对了, 重复一次上面的dos操作就OK了~_~
 　　
 
-Do not install anything on a button to your website directory, you'll destroy your site database data, remember to local backup database data
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Do not install anything on a button to your website directory,
+you'll destroy your site database data,
+remember to local backup database data
