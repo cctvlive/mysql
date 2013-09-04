@@ -89,7 +89,8 @@ mysql有时候忘记密码了怎么办?我给出案例和说明!
 　　Bye
 
 　　D:\web\www.php100.com\Mysql\MySQL Server5.5\bin>
-　　#one:
+　　
+#one:
 　　数据恢复:
 　　
 　　1关闭数据库服务
