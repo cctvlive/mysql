@@ -1,0 +1,145 @@
+
+SecureCRT技巧总结
+目录
+SecureCRT技巧总结... 1
+一、安装和激活... 1
+二、一些按钮的中文翻译... 4
+三、创建一个普通的Session. 5
+四、美化终端窗口和字体。... 9
+五、修改默认的session配置... 10
+六、SecureCRT自带的文件传输... 11
+七、克隆session. 12
+八、常用快捷键... 13
+九、session keeplive
+ 
+ 
+一、安装和激活
+安装
+1、 在http://down.51cto.com/data/128681下载相关包激活工具，运行scrt622-x86.exe。
+2、 进入安装向导程序，默认下一步，直到安装完成既可以。
+            
+破解
+1、 找到安装crt的目录。C:\Program Files\VanDyke Software\SecureCRT
+2、 把secureCRT-kg.exe放到安装crt的目录下，运行此程序
+点击patch按钮
+         
+然后输入注册信息，点击Generate按钮，生成注册码。
+        
+3、 把注册码输入应用程序。
+点击Enter license Data。
+             
+     
+         
+        
+       
+      
+   
+        
+        
+        
+4、 点击完成SecureCRT及安装完成。
+ 
+二、一些按钮的中文翻译
+1、File文件
+Connect... 连接，打开一个连接或者编辑已有的连接，创建新连接。
+ 
+Quick Connect... 快速连接，快速连接对话框，快速连接主机的最便捷方式
+ 
+Connect in Tab... 在Tab中打开一个新的会话窗口。
+ 
+Clone Session 克隆当前会话窗口。
+ 
+Connect SFTP Tab 打开SFTP窗口，对于SSH连接，此选项可用。在此会话窗口中可使用SFTP命令传输文件。
+ 
+Reconnect 重新连接
+ 
+Disconnect 中断当前会话窗口的连接
+ 
+Log Session 把当前窗口的会话记录到log文件中。
+ 
+Raw Log Session 将更详细的会话记录到log文件中，包括服务器更详细的响应信息。
+ 
+Trace Options 在log文件中记录协议会话信息选项。（包括客户端与主机互相连接时的一些信息内容）
+ 
+2、Edit编辑
+拷贝粘贴等
+ 
+3、View视图
+显示各种工具条
+ 
+4、Options选项
+包括全局选项和Session选项
+ 
+5、 Transfer传递文件
+使用Xmodem/Zmodem上传下载文件
+ 
+6、Script.脚本
+运行一个脚本文件，或记录一个新的脚本。（类似Word中的宏功能）
+ 
+7、Tools工具
+键盘映射编辑，密钥生成工具等
+ 
+8、 Help帮助
+三、创建一个普通的Session
+         1、点击File→Connect，出现Connect窗口，反键Sessions，创建一个目录，名字叫linux。
+如图
+             
+       
+3、 然后反键linux，建立一个session。
+                   弹出一个new session向导，我们勾住下面的‘Do not use this wizard when creating’。
+         
+          
+ 
+          
+ 
+ 
+然后点击OK，session建立成功。
+ 
+              
+点击这个Session就可以连接进去，以后的内容不解释。
+        
+四、美化终端窗口和字体。
+         默认的界面看着挺难看的，我们优化以下。
+         View→Themes→选择你自己喜欢的主题
+         
+         然后优化字体，我觉得默认的字体一般，不过可以选择自己更喜欢的。顺便说下，有时间看见一些网友截图上来的终端字体，我看的那个是头疼啊，难看的要死……所以才产生了这节教程。西面的Normal font是设置字体，characterencoding是编码，如果你使用的UTF8的中文，就需要调整character为UTF8，否则乱码。下面的Cursor style，是光标的风格，自己根据喜好修改。
+          
+五、修改默认的session配置
+         上面我们配置了一次session，不过是针对单个session，如果每次建立session都要去设置一次，太累了，所以我们可以把默认的session模板调整好，每次新建立的session都会调用默认的模板。
+         如何设置默认的session模板？
+         View→Global Options→Gerneral→Default Session→Edit default setting
+         这里就是默认的模板，大家设置好以后它会提示你是否把新的default应用到以前的所有session里面。
+           
+         根据你的情况设置就行了。但是以后的session都会应用。
+ 
+六、SecureCRT自带的文件传输
+         使用Zemodem和sftp协议传输文件。
+         Upload为上传的默认目录，download是下载的默认目录。
+         
+1、 上传，在终端使用rz命令。出现默认的上传文件选择窗口，选择需要上传的文件即可。
+          
+下载，在终端使用sz filename 既可，更多用法参考help。
+        
+         2、还有就是此版本的SecureCRT支持sftp协议，使用alt+p快键，调出sftp窗口，命令行方式使用sftp。
+ 
+七、克隆session
+        
+         这里的Clone Session是在当前窗口克隆当前会话，Clone in new window，是在克隆一个会话，在新窗口打开。
+         此功能和linux自带的screen工具比较相似，但是各有优势。这里不做重点讨论，大家自己去google下。
+         
+ 
+八、常用快捷键
+         1、鼠标左键有选中功能，单击选中的内容为复制。鼠标右键单击空白处为粘贴剪贴板内容到光标处，单击选中内容为复制和粘贴内容到光标处。
+         2、alt+enter 全屏
+         3、alt+p 调出sftp窗口
+         4、ctrl+f4 关闭当前session
+         5、alt+f4关闭SecureCRT软件
+         6、alt+c 打开连接标签，然后选择自己的session即可。
+ 
+九、session keeplive
+         相信大家都遇见过，连上服务器的session过一会，空闲的连接就自动断开了，至少在RHEL5.4中是这样的，如何解决这个问题了。
+         我们可以设置SecureCRT每隔一定时间，往服务器发送一些信息，保持连接不端口。
+         参照上面修改默认session配置，打开默认session配置窗口，选着terminal，勾选Send protocol NO-OP，一般选择60s就行了。
+        
+           
+ 
